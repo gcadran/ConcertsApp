@@ -1,56 +1,78 @@
-# Welcome to your Expo app 👋
+# ConcertsApp
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Application mobile développée avec **React Native** et **Expo** permettant de consulter et de rechercher des concerts à partir d'une liste de données.
 
-## Get started
+## Présentation
 
-1. Install dependencies
+ConcertsApp propose une interface simple pour parcourir un catalogue de concerts, retrouver les informations sur les artistes et filtrer les résultats selon le nom du groupe.
 
-   ```bash
-   npm install
-   ```
+L'application s'articule autour de plusieurs écrans, depuis l'accueil jusqu'à la consultation des concerts.
 
-2. Start the app
+## Fonctionnalités
 
-   ```bash
-   npx expo start
-   ```
+- **Navigation entre les écrans** : passage de l'accueil au formulaire, puis à la liste des concerts.
+- **Formulaire utilisateur** : saisie du nom, du prénom, de l'âge et du lieu de naissance.
+- **Liste de concerts** : affichage des concerts à partir de données JSON avec une `FlatList`.
+- **Recherche dynamique** : filtrage des concerts selon le nom du groupe.
+- **Message de bienvenue personnalisé** : affichage du prénom et du nom de l'utilisateur.
 
-In the output, you'll find options to open the app in a
+## Technologies
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- React Native
+- Expo
+- TypeScript / JavaScript
+- JSON
+- Expo Router
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Installation
 
-## Get a fresh project
+### Prérequis
 
-When you're ready, run:
+- Node.js et npm
+- Expo Go ou un émulateur compatible, selon la configuration utilisée
+
+### Cloner le dépôt
 
 ```bash
-npm run reset-project
+git clone <URL_DU_DEPOT>
+cd ConcertsApp
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### Installer les dépendances
 
-### Other setup steps
+```bash
+npm install
+```
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+### Démarrer l'application
 
-## Learn more
+```bash
+npx expo start
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+Suivez les instructions affichées dans le terminal pour lancer l'application sur un appareil ou un émulateur compatible.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Structure du projet
 
-## Join the community
+Le projet est organisé autour de plusieurs écrans et d'un fichier JSON contenant les données des concerts :
 
-Join our community of developers creating universal apps.
+- **Accueil** : point d'entrée de l'application.
+- **Formulaire utilisateur** : saisie des informations personnelles.
+- **Liste des concerts** : affichage et recherche des concerts.
+- **Données JSON** : source locale des informations affichées.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Données
+
+Les concerts sont chargés depuis un fichier JSON local. Cette organisation sépare les données de l'interface et facilite leur modification.
+
+## Améliorations possibles
+
+- Ajouter des filtres par date, genre musical ou artiste.
+- Afficher le détail d'un concert.
+- Ajouter une liste de favoris.
+- Persister localement les informations de l'utilisateur et les concerts.
+- Améliorer l'interface et l'expérience de navigation.
+
+## Licence
+
+Projet de développement mobile.
